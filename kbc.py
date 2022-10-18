@@ -61,7 +61,7 @@ for i in range(len(a)):
     print('\033[1m','\033[91m','Q',str(i+1),a[h],'\033[0m')
     print()
     for j in b[h]:
-        print('\033[35m',j,'\033[0m')
+        print('\033[33m','\033[1m',j,'\033[0m')
     print()
     n = int(input("enter your answer: "))
     print()
@@ -77,7 +77,7 @@ for i in range(len(a)):
         if af == 1:
             print('\033[33m','allready used gochi','\033[0m')
         for j in t:
-            print('\033[32m',j,'\033[0m')
+            print('\033[32m','\033[1m',j,'\033[0m')
         print()
         l = int(input("choose your option: "))
         # 50:50 
@@ -127,20 +127,11 @@ for i in range(len(a)):
             print('\033[31m','you win amount',d,'rs.','\033[0m')
         print()
     if c[h]== n:
-       print('\033[33m','congratulation,you win.','\033[0m')
+       print('\033[33m','\033[1m','congratulation,you won.','\033[0m')
        d += d * 2
        print()
        print('\033[32m','you win',d,'rs.','\033[0m')
        continue
     else:
-        print('\033[32m','your answer is wrong \n you loss','\033[0m')
-    print('\033[31m','do you want play continue y or n','\033[0m')
-    print()
-    m = input("enter your choice: ")
-    if m == "y":
-        i = 0
-        continue
-    else:
-        break
+        print('\033[32m','\033[1m','your answer is wrong\n  you lost','\033[0m')
 print("your total amount is ",d,"rupees")
-
